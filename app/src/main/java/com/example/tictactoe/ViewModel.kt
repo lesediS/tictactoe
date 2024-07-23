@@ -57,17 +57,18 @@ class ViewModel: ViewModel() {
                     currentTurn = BoardCellValue.NONE,
                     hasWon = true
                 )
-            } else
-            state = if (hasBoardFull()) {
-                state.copy(
-                    hintText = "Draw! Try again?",
-                    drawCount = state.drawCount + 1
-                )
             } else {
-                state.copy(
-                    hintText = "Player 'O' turn",
-                    currentTurn = BoardCellValue.CROSS
-                )
+                state = if (hasBoardFull()) {
+                    state.copy(
+                        hintText = "Draw! Try again?",
+                        drawCount = state.drawCount + 1
+                    )
+                } else {
+                    state.copy(
+                        hintText = "Player 'X' turn",
+                        currentTurn = BoardCellValue.CROSS
+                    )
+                }
             }
 
         } else if (state.currentTurn == BoardCellValue.CROSS) {
@@ -93,6 +94,7 @@ class ViewModel: ViewModel() {
                 }
         }
     }
+
 
     private fun checkForWin(boardVal: BoardCellValue): Boolean {
         when {

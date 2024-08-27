@@ -7,7 +7,7 @@ Welcome to the Tic Tac Toe Game! This README will guide you through setting up t
       <ul>
         <li>Open your terminal or command prompt.</li>
         <li>Run the following command to clone the repository from GitHub:
-          <pre><code> git clone https://github.com/yourusername/tic-tac-toe.git  </code></pre>
+          <pre><code>https://github.com/lesediS/tictactoe.git</code></pre>
         <li>Navigate to the project directory</li>
         <li>Open the project in Android Studio by selecting the folder.</li>
       </ul>
